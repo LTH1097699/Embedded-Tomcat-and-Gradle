@@ -20,15 +20,6 @@ import javax.servlet.ServletRegistration;
 @ComponentScan(basePackages = {"com.auth0.samples"})
 public class SpringAppConfig implements WebApplicationInitializer {
 
-    @Bean
-    public ViewResolver internalResourceViewResolver() {
-        InternalResourceViewResolver bean = new InternalResourceViewResolver();
-        bean.setViewClass(JstlView.class);
-        bean.setPrefix("/WEB-INF/");
-        bean.setSuffix(".jsp");
-        return bean;
-    }
-
     @Override
     public void onStartup(ServletContext container) {
         // Create the 'root' Spring application context
